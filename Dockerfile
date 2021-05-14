@@ -44,10 +44,10 @@ RUN ./configure --add-module=/src/nginx-rtmp-module-1.1.6 \
   make install
 
 ADD nginx.conf /config/nginx.conf
-ADD /etc/letsencrypt/live/vfrecords.customvirtualevents.com/fullchain.pem /data/fullchain.pem
-ADD /etc/letsencrypt/live/vfrecords.customvirtualevents.com/privkey.pem /data/privkey.pem
-ADD /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot /data/options-ssl-nginx.conf
-ADD /etc/letsencrypt/ssl-dhparams.pem /data/ssl-dhparams.pem
+ADD fullchain.pem /data/fullchain.pem
+ADD privkey.pem /data/privkey.pem
+ADD options-ssl-nginx.conf; # managed by Certbot /data/options-ssl-nginx.conf
+ADD ssl-dhparams.pem /data/ssl-dhparams.pem
 ADD static /static
 
 WORKDIR /
