@@ -46,7 +46,7 @@ RUN ./configure --add-module=/src/nginx-rtmp-module-1.1.6 \
 ADD nginx.conf /config/nginx.conf
 ADD fullchain.pem /data/fullchain.pem
 ADD privkey.pem /data/privkey.pem
-ADD options-ssl-nginx.conf; # managed by Certbot /data/options-ssl-nginx.conf
+ADD options-ssl-nginx.conf /data/options-ssl-nginx.conf
 ADD ssl-dhparams.pem /data/ssl-dhparams.pem
 ADD static /static
 
